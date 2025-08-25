@@ -4,7 +4,7 @@ import json, os
 
 CONTACTS_FILE = "contacts.json"
 
-# -------- File Handling --------
+# ------- File Handling --------
 def load_contacts():
     if os.path.exists(CONTACTS_FILE):
         try:
@@ -181,3 +181,4 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = ContactBook(root)
     root.mainloop()
+
