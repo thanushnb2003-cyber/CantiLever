@@ -4,7 +4,6 @@ import json, os
 
 CONTACTS_FILE = "contacts.json"
 
-# ------- File Handling --------
 def load_contacts():
     if os.path.exists(CONTACTS_FILE):
         try:
@@ -19,7 +18,6 @@ def save_contacts(contacts):
     with open(CONTACTS_FILE, "w") as f:
         json.dump(contacts, f, indent=4)
 
-# -------- Main Application --------
 class ContactBook:
     def __init__(self, root):
         self.root = root
@@ -181,4 +179,5 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = ContactBook(root)
     root.mainloop()
+
 
